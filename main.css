@@ -1,0 +1,922 @@
+/* ==========================================
+   Harsh AI Website v4.0
+   Part 1
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#121212;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align:center;
+    transition:0.4s;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    background:#1b1b1b;
+    box-shadow:0 5px 15px rgba(0,0,0,0.4);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+/* Logo */
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+    color:white;
+    cursor:pointer;
+}
+
+/* Navigation */
+
+.nav-links{
+    display:flex;
+    gap:18px;
+}
+
+.nav-btn{
+    background:none;
+    border:none;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    padding:8px 14px;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.nav-btn:hover{
+    color:#00BFFF;
+    background:rgba(255,255,255,0.08);
+}
+
+/* Theme Button */
+
+#themeButton{
+    background:black;
+    color:white;
+    border:2px solid white;
+    padding:10px 18px;
+    border-radius:12px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+#themeButton:hover{
+    background:white;
+    color:black;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    padding:70px 20px;
+}
+
+#typing{
+    font-size:48px;
+    font-family:Georgia, serif;
+    margin-bottom:20px;
+    color:white;
+    border-right:4px solid #00BFFF;
+    display:inline-block;
+    padding-right:6px;
+    min-height:60px;
+}
+
+#clock{
+    color:#00BFFF;
+    font-size:28px;
+    margin-top:15px;
+}
+
+#date{
+    color:white;
+    font-size:20px;
+    margin-top:10px;
+    margin-bottom:30px;
+}
+
+.hero p{
+    font-size:22px;
+    line-height:1.8;
+    margin:25px auto;
+    max-width:700px;
+}
+
+/* ================= BUTTONS ================= */
+
+.hero button{
+    width:240px;
+    height:60px;
+    margin:12px;
+    font-size:20px;
+    background:black;
+    color:white;
+    border:2px solid white;
+    border-radius:15px;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 5px 15px rgba(255,255,255,0.15);
+}
+
+.hero button:hover{
+    background:white;
+    color:black;
+    transform:scale(1.05);
+}
+
+/* ================= MESSAGE ================= */
+
+#message{
+    margin-top:30px;
+    font-size:22px;
+    font-weight:bold;
+    color:white;
+    min-height:35px;
+}
+
+/* ================= NOTIFICATION ================= */
+
+#notification{
+    position:fixed;
+    top:-100px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#00BFFF;
+    color:white;
+    padding:15px 30px;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:bold;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    transition:0.5s;
+    z-index:9999;
+}
+
+#notification.show{
+    top:20px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    margin-top:70px;
+    padding:25px;
+    background:#1b1b1b;
+}
+
+footer hr{
+    width:90%;
+    margin:0 auto 20px;
+    border:none;
+    height:1px;
+    background:#444;
+}
+
+footer p{
+    color:white;
+    font-size:16px;
+}
+
+/* ================= LIGHT MODE ================= */
+
+body.light-mode{
+    background:white;
+    color:black;
+}
+
+body.light-mode nav{
+    background:#f5f5f5;
+}
+
+body.light-mode .logo{
+    color:black;
+}
+
+body.light-mode .nav-btn{
+    color:black;
+}
+
+body.light-mode .nav-btn:hover{
+    color:#0077cc;
+    background:rgba(0,0,0,0.08);
+}
+
+body.light-mode #typing,
+body.light-mode #date,
+body.light-mode #message,
+body.light-mode footer p{
+    color:black;
+}
+
+body.light-mode #clock{
+    color:#0077cc;
+}
+
+body.light-mode .hero button{
+    background:white;
+    color:black;
+    border:2px solid black;
+}
+
+body.light-mode .hero button:hover{
+    background:black;
+    color:white;
+}
+
+body.light-mode #themeButton{
+    background:white;
+    color:black;
+    border:2px solid black;
+}
+
+body.light-mode #themeButton:hover{
+    background:black;
+    color:white;
+}
+
+body.light-mode footer{
+    background:#eeeeee;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+        padding:20px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    #typing{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .hero button{
+        width:90%;
+        max-width:280px;
+    }
+
+    #themeButton{
+        width:220px;
+    }
+
+}
+
+/* ==========================================
+   Harsh AI Website v4.0
+   Part 4 (Premium Effects)
+========================================== */
+
+/* Smooth Fade Animation */
+
+.hero{
+    animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* Logo Hover */
+
+.logo:hover{
+
+    color:#00BFFF;
+    transition:0.3s;
+
+}
+
+/* Button Glow */
+
+.hero button:hover{
+
+    box-shadow:0 0 20px #00BFFF;
+
+}
+
+#themeButton:hover{
+
+    box-shadow:0 0 15px #00BFFF;
+
+}
+
+/* Clock Glow */
+
+#clock{
+
+    text-shadow:0 0 10px #00BFFF;
+
+}
+
+/* Typing Cursor Blink */
+
+#typing{
+
+    border-right:4px solid #00BFFF;
+    animation:blink .8s infinite;
+
+}
+
+@keyframes blink{
+
+    50%{
+        border-color:transparent;
+    }
+
+}
+
+/* Notification Glow */
+
+#notification{
+
+    box-shadow:0 0 20px rgba(0,191,255,.6);
+
+}
+
+/* Custom Scrollbar */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#00BFFF;
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#008ecc;
+
+}
+
+/* Selection */
+
+::selection{
+
+    background:#00BFFF;
+    color:white;
+
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+
+    padding:80px 20px;
+
+}
+
+.about h2{
+
+    font-size:42px;
+
+    margin-bottom:40px;
+
+}
+
+.about-card{
+
+    max-width:700px;
+
+    margin:auto;
+
+    background:#1f1f1f;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 0 20px rgba(0,191,255,.3);
+
+    transition:.3s;
+
+}
+
+.about-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 0 30px rgba(0,191,255,.6);
+
+}
+
+.about-card h3{
+
+    font-size:30px;
+
+    margin-bottom:25px;
+
+    color:#00BFFF;
+
+}
+
+.about-card p{
+
+    font-size:20px;
+
+    line-height:2;
+
+}
+
+/* Light Mode */
+
+body.light-mode .about-card{
+
+    background:white;
+
+    color:black;
+
+    border:2px solid #ddd;
+
+}
+
+body.light-mode .about-card h3{
+
+    color:#0077cc;
+
+}
+
+/* ================= SKILLS ================= */
+
+.skills{
+
+    padding:80px 20px;
+
+}
+
+.skills h2{
+
+    font-size:42px;
+    margin-bottom:40px;
+
+}
+
+.skill{
+
+    max-width:700px;
+    margin:25px auto;
+    text-align:left;
+
+}
+
+.skill span{
+
+    font-size:22px;
+    font-weight:bold;
+
+}
+
+.bar{
+
+    width:100%;
+    height:22px;
+    background:#333;
+    border-radius:30px;
+    overflow:hidden;
+    margin-top:10px;
+
+}
+
+.bar div{
+
+    height:100%;
+    border-radius:30px;
+    animation:fillBar 2s ease;
+
+}
+
+/* Progress */
+
+.html{
+
+    width:90%;
+    background:#ff6b35;
+
+}
+
+.css{
+
+    width:85%;
+    background:#2196F3;
+
+}
+
+.js{
+
+    width:75%;
+    background:#FFD600;
+
+}
+
+.ai{
+
+    width:95%;
+    background:#00E676;
+
+}
+
+/* Animation */
+
+@keyframes fillBar{
+
+    from{
+
+        width:0;
+
+    }
+
+}
+
+/* Light Mode */
+
+body.light-mode .bar{
+
+    background:#d9d9d9;
+
+}
+
+body.light-mode .skill span{
+
+    color:black;
+
+}
+
+/* ================= PROJECTS ================= */
+
+.projects{
+
+    padding:80px 20px;
+
+}
+
+.projects h2{
+
+    font-size:42px;
+    margin-bottom:40px;
+
+}
+
+.project-container{
+
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+
+}
+
+.project-card{
+
+    width:320px;
+    background:#1f1f1f;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(0,191,255,.2);
+    transition:.3s;
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-10px);
+    box-shadow:0 0 30px rgba(0,191,255,.6);
+
+}
+
+.project-card h3{
+
+    color:#00BFFF;
+    margin-bottom:20px;
+    font-size:26px;
+
+}
+
+.project-card p{
+
+    font-size:18px;
+    line-height:1.7;
+
+}
+
+/* Light Mode */
+
+body.light-mode .project-card{
+
+    background:white;
+    color:black;
+    border:2px solid #ddd;
+
+}
+
+body.light-mode .project-card h3{
+
+    color:#0077cc;
+
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+
+    padding:80px 20px;
+
+}
+
+.contact h2{
+
+    font-size:42px;
+    margin-bottom:40px;
+
+}
+
+.contact-card{
+
+    max-width:600px;
+    margin:auto;
+    background:#1f1f1f;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(0,191,255,.25);
+    transition:.3s;
+
+}
+
+.contact-card:hover{
+
+    transform:translateY(-8px);
+    box-shadow:0 0 30px rgba(0,191,255,.6);
+
+}
+
+.contact-card p{
+
+    font-size:20px;
+    margin:18px 0;
+
+}
+
+.contact-card button{
+
+    margin-top:25px;
+    width:220px;
+    height:55px;
+    background:black;
+    color:white;
+    border:2px solid white;
+    border-radius:12px;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 5px 15px
+    rgba(225,255,255,0.15)
+
+}
+
+.contact-card button:hover{
+
+    background:white;
+    color:black;
+    transform:scale(1.05);
+
+}
+
+/* Light Mode */
+
+body.light-mode .contact-card{
+
+    background:white;
+    color:black;
+    border:2px solid #ddd;
+
+}
+
+/* ================= SCROLL PROGRESS BAR ================= */
+
+#progressBar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:0%;
+
+    height:5px;
+
+    background:#00BFFF;
+
+    z-index:99999;
+
+    transition:width 0.1s;
+
+    box-shadow:0 0 15px #00BFFF;
+
+}
+
+/* ================= LOADER ================= */
+
+#loader{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:#121212;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999999;
+
+    transition:opacity .8s;
+
+}
+
+#loader h1{
+
+    font-size:55px;
+
+    color:#00BFFF;
+
+    margin-bottom:15px;
+
+}
+
+#loader p{
+
+    font-size:24px;
+
+    color:white;
+
+    margin-bottom:30px;
+
+}
+
+.loading-bar{
+
+    width:320px;
+
+    height:12px;
+
+    background:#333;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+}
+
+.loading-fill{
+
+    width:0%;
+
+    height:100%;
+
+    background:#00BFFF;
+
+    animation:loading 2.5s linear forwards;
+
+}
+
+@keyframes loading{
+
+    from{
+
+        width:0%;
+
+    }
+
+    to{
+
+        width:100%;
+
+    }
+
+}
+
+/* ===== Secret Developer Mode ===== */
+
+#secretMode{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:#00BFFF;
+    color:white;
+    padding:30px;
+    border-radius:20px;
+    font-size:30px;
+    text-align:center;
+    display:none;
+    z-index:999999;
+    box-shadow:0 0 40px #00BFFF;
+}
+
+body.developer{
+    background:#001f3f;
+    body.developer{
+
+    animation: developerGlow 2s infinite alternate;
+
+}
+
+@keyframes developerGlow{
+
+    from{
+
+        box-shadow: inset 0 0 50px #00BFFF;
+
+    }
+
+    to{
+
+        box-shadow: inset 0 0 100px cyan;
+
+    }
+
+}
+
+
+}
+
+body.developer nav{
+    background:#003366;
+}
+
+body.developer .hero{
+    animation:glow 1s infinite alternate;
+}
+
+@keyframes glow{
+
+    from{
+        filter:drop-shadow(0 0 5px cyan);
+    }
+
+    to{
+        filter:drop-shadow(0 0 25px cyan);
+    }
+
+}
+

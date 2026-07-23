@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Harsh AI</title>
+
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+
+    <div id="loader">
+
+    <h1>Harsh AI</h1>
+
+    <p>Loading...</p>
+
+    <div class="loading-bar">
+
+        <div class="loading-fill"></div>
+
+    </div>
+
+</div>
+
+    <div id="progressBar"></div>
+
+    <!-- Welcome Notification -->
+
+    <div id="notification">
+        👋 Welcome to Harsh AI Website
+    </div>
+
+    <!-- Navigation Bar -->
+
+    <nav>
+
+        <h2 class="logo">Harsh AI</h2>
+
+        <div class="nav-links">
+
+            <button class="nav-btn" onclick="showHome()">Home</button>
+
+            <button class="nav-btn" onclick="showAbout()">About</button>
+
+            <button class="nav-btn" onclick="showProjects()">Projects</button>
+
+            <button class="nav-btn" onclick="showContact()">Contact</button>
+
+        </div>
+
+        <button id="themeButton" onclick="toggleTheme()">
+            🌙 Dark Mode
+        </button>
+
+    </nav>
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <h1 id="typing"></h1>
+
+        <h3 id="clock"></h3>
+
+        <h4 id="date"></h4>
+
+        <p>
+            Hello! I'm Harsh 👋 <br><br>
+
+            I am learning HTML, CSS and JavaScript.<br><br>
+
+            My goal is to become an AI Developer and build amazing websites.
+        </p>
+
+        <button onclick="showExploreMessage()">
+            🚀 Explore Website
+        </button>
+
+        <button onclick="showSubscribeMessage()">
+            ❤️ Subscribe
+        </button>
+
+        <p id="message"></p>
+
+    </section>
+
+    <!-- About Section -->
+
+    <section class="about">
+
+        <h2>👨‍💻 About Me</h2>
+
+        <div class="about-card">
+
+            <h3>Hi, I'm Harsh 👋</h3>
+
+            <p>
+
+                📚 Class 8 Student <br><br>
+
+                🤖 AI Enthusiast <br><br>
+
+                💻 Learning HTML, CSS & JavaScript <br><br>
+
+                🚀 Future AI Developer & Entrepreneur <br><br>
+
+                ❤️ I love Technology, AI and Creative Projects.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Skills Section -->
+
+<section class="skills">
+
+    <h2>🚀 My Skills</h2>
+
+    <div class="skill">
+
+        <span>💻 HTML</span>
+
+        <div class="bar">
+            <div class="html"></div>
+        </div>
+
+    </div>
+
+    <div class="skill">
+
+        <span>🎨 CSS</span>
+
+        <div class="bar">
+            <div class="css"></div>
+        </div>
+
+    </div>
+
+    <div class="skill">
+
+        <span>⚡ JavaScript</span>
+
+        <div class="bar">
+            <div class="js"></div>
+        </div>
+
+    </div>
+
+    <div class="skill">
+
+        <span>🤖 AI</span>
+
+        <div class="bar">
+            <div class="ai"></div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Projects Section -->
+
+<section class="projects">
+
+    <h2>💻 My Projects</h2>
+
+    <div class="project-container">
+
+        <div class="project-card">
+
+            <h3>🌐 Harsh AI Website</h3>
+
+            <p>
+                My first portfolio website built using
+                HTML, CSS and JavaScript.
+            </p>
+
+        </div>
+
+        <div class="project-card">
+
+            <h3>🤖 AI Assistant</h3>
+
+            <p>
+                Coming Soon...
+            </p>
+
+        </div>
+
+        <div class="project-card">
+
+            <h3>📱 Portfolio Website</h3>
+
+            <p>
+                More exciting projects are coming soon!
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Contact Section -->
+
+<section class="contact">
+
+    <h2>📞 Contact Me</h2>
+
+    <div class="contact-card">
+
+        <p>👤 <strong>Name:</strong> Harsh</p>
+
+        <p>🎓 <strong>Class:</strong> 8</p>
+
+        <p>🤖 <strong>Passion:</strong> AI & Web Development</p>
+
+        <p>📍 <strong>Country:</strong> India 🇮🇳</p>
+
+        <button onclick="contactMessage()">
+            📩 Say Hello
+        </button>
+
+    </div>
+
+</section>
+
+ <div id="secretMode">
+    😈 Developer Mode Activated! <br>
+    Welcome, Harsh 🚀
+</div>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <hr>
+
+        <p>
+            © 2026 Harsh AI • Built with HTML, CSS & JavaScript
+        </p>
+
+    </footer>
+
+    <!-- AI Assistant -->
+
+<button id="aiButton" onclick="toggleAI()">
+🤖
+</button>
+
+<div id="aiChat">
+
+    <h2>🤖 Harsh AI</h2>
+
+    <p id="aiMessage">
+        Hello Harsh 👋<br>
+        How can I help you today?
+    </p>
+
+    <button onclick="closeAI()">
+        Close
+    </button>
+
+</div>
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
